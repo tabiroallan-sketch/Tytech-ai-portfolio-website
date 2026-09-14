@@ -36,9 +36,9 @@ if (!envSiteUrl && process.env.NODE_ENV === "production") {
 export const business = {
   /** Your business / brand name (used in headers, SEO and messages). */
   name: "Tytech AI",
-  tagline: "AI Automation & Web Solutions",
+  tagline: "AI Automation Agency",
   description:
-    "We build modern websites, AI agents and automated workflows that help businesses eliminate repetitive work, respond faster and operate more efficiently.",
+    "Tytech AI is an AI automation agency. We build AI agents, n8n workflows, business integrations and websites that remove repetitive work and help your business respond faster.",
   /** Public site URL. Falls back to https://tytech.ai when NEXT_PUBLIC_SITE_URL is unset. */
   url: resolvedSiteUrl,
   /** Public contact email — used everywhere and as the WhatsApp fallback. */

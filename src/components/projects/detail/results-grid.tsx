@@ -26,7 +26,7 @@ export function ResultsGrid({ results, note }: ResultsGridProps) {
       <p className="flex items-start gap-2 text-xs italic leading-relaxed text-zinc-500">
         <TrendingUp className="mt-0.5 h-3.5 w-3.5 shrink-0" aria-hidden />
         {note ??
-          "Metrics shown are illustrative example data for this demo case study — replace them with your real client outcomes in data/projects.ts."}
+          "These outcomes illustrate what a working system of this kind is designed to achieve. In a real project we'd model realistic targets with you and measure them after launch."}
       </p>
     </Reveal>
   );

@@ -3,13 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Bot, Check, Globe, Network, Workflow } from "lucide-react";
 import { services, relatedByService } from "@/data/services";
-import { getProjectBySlug, projects as allProjects } from "@/data/projects";
+import { getProjectBySlug } from "@/data/projects";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Reveal } from "@/components/ui/reveal";
 import { CTASection } from "@/components/ui/cta-section";
 import { WhatsAppButton } from "@/components/whatsapp/whatsapp-button";
 import { JsonLd } from "@/components/seo/json-ld";
 import { serviceLd } from "@/lib/jsonld";
+import { buildMetadata } from "@/lib/seo/config";
 
 const SERVICE_ICONS = {
   globe: Globe,
@@ -18,19 +19,26 @@ const SERVICE_ICONS = {
   network: Network,
 } as const;
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Services — AI Agents, n8n Automation & Web Development",
   description:
-    "Web development, AI agents, n8n workflow automation and complete AI business systems. Fixed scope, clear process, built to eliminate repetitive work.",
-  alternates: { canonical: "/services" },
-};
+    "AI automation, AI agents, n8n workflow automation, AI integrations, business systems and web development. Fixed scope, clear process, built to remove repetitive work.",
+  path: "/services",
+  keywords: [
+    "AI automation services",
+    "AI agents",
+    "n8n workflows",
+    "business automation",
+    "web development",
+  ],
+});
 
 export default function ServicesPage() {
   return (
     <div className="relative">
       <JsonLd
         data={services.map((service) =>
-          serviceLd(service.title, service.shortDescription),
+          serviceLd(service.title, service.shortDescription, `/services/${service.id}`),
         )}
       />
       <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[420px]">
@@ -62,21 +70,21 @@ export default function ServicesPage() {
               >
                 <Reveal>
                   <div
-                      className={`glass-card grid gap-8 rounded-3xl p-7 sm:p-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-12 ${
-                        reversed ? "lg:[&>*:first-child]:order-2" : ""
-                      }`}
-                    >
-                      <div className="flex flex-col items-start gap-5">
-                        <div className="gradient-border-card relative aspect-[16/9] w-full overflow-hidden rounded-2xl">
-                          <Image
-                            src={`/images/sections/automation-${index + 3}.png`}
-                            alt={`${service.title} illustration`}
-                            fill
-                            sizes="(max-width: 1152px) 100vw, 480px"
-                            className="object-cover"
-                          />
-                        </div>
-                        <span className="flex h-14 w-14 items-center justify-center rounded-2xl border border-ink-700 bg-ink-800 text-emerald-300">
+                    className={`glass-card grid gap-8 rounded-3xl p-7 sm:p-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-12 ${
+                      reversed ? "lg:[&>*:first-child]:order-2" : ""
+                    }`}
+                  >
+                    <div className="flex flex-col items-start gap-5">
+                      <div className="gradient-border-card relative aspect-[16/9] w-full overflow-hidden rounded-2xl">
+                        <Image
+                          src={`/images/sections/automation-${index + 3}.png`}
+                          alt={`${service.title} illustration`}
+                          fill
+                          sizes="(max-width: 1152px) 100vw, 480px"
+                          className="object-cover"
+                        />
+                      </div>
+                      <span className="flex h-14 w-14 items-center justify-center rounded-2xl border border-ink-700 bg-ink-800 text-emerald-300">
                         <Icon className="h-7 w-7" aria-hidden />
                       </span>
                       <h2
@@ -89,21 +97,18 @@ export default function ServicesPage() {
                         {service.longDescription}
                       </p>
                       <div className="flex flex-wrap items-center gap-3">
+                        <Link
+                          href={`/services/${service.id}`}
+                          className="inline-flex h-11 items-center gap-2 rounded-xl bg-emerald-400 px-5 text-sm font-semibold text-ink-950 transition-colors hover:bg-emerald-300"
+                        >
+                          Explore this service
+                          <ArrowRight className="h-4 w-4" aria-hidden />
+                        </Link>
                         <WhatsAppButton
                           projectName={service.title}
                           label="Discuss Your Automation"
                           source="services"
                         />
-                        <Link
-                          href="/contact"
-                          className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-300 transition-colors hover:text-emerald-200"
-                        >
-                          Discuss this service
-                          <ArrowRight
-                            className="h-4 w-4 transition-transform group-hover:translate-x-1"
-                            aria-hidden
-                          />
-                        </Link>
                       </div>
                     </div>
 
@@ -171,10 +176,6 @@ export default function ServicesPage() {
             );
           })}
         </div>
-
-        <p className="mt-10 text-center text-xs italic text-zinc-600">
-          Related project links reference current demonstration case studies ({allProjects.length} total).
-        </p>
       </section>
 
       <CTASection />

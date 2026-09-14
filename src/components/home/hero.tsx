@@ -65,9 +65,10 @@ export function Hero() {
             }}
             className="text-base leading-relaxed text-zinc-400 sm:text-lg"
           >
-            We build modern websites, AI agents and automated workflows that help
-            businesses eliminate repetitive work, respond faster and operate more
-            efficiently.
+            Tytech AI is an AI automation agency. We build AI agents, n8n
+            workflows and business integrations that remove repetitive work —
+            so your business responds faster, loses fewer leads and runs
+            itself more of the time.
           </motion.p>
 
           <motion.div

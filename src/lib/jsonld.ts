@@ -49,16 +49,43 @@ export function breadcrumbLd(
   };
 }
 
-export function serviceLd(name: string, description: string): JsonLd {
+export function serviceLd(
+  name: string,
+  description: string,
+  path = "/services",
+): JsonLd {
   return {
     "@context": "https://schema.org",
     "@type": "Service",
     serviceType: name,
     description,
     provider: { "@id": orgId },
-    url: orgUrl,
+    url: `${orgUrl}${path}`,
     areaServed: { "@type": "Place", name: site.location },
     inLanguage: "en",
+  };
+}
+
+/**
+ * FAQPage schema — only used on pages that genuinely display FAQs on the page.
+ * Do not generate FAQ schema merely for SEO.
+ */
+export function faqPageLd(
+  entries: { question: string; answer: string }[],
+  path: string,
+): JsonLd {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: entries.map(({ question, answer }) => ({
+      "@type": "Question",
+      name: question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: answer,
+      },
+    })),
+    ...{ mainEntityOfPage: `${orgUrl}${path}` },
   };
 }
 

@@ -60,6 +60,31 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async redirects() {
+    return [
+      // Pre-IA-restructure service URLs → nested under /services/<slug>.
+      {
+        source: "/ai-agents",
+        destination: "/services/ai-agents",
+        permanent: true,
+      },
+      {
+        source: "/ai-automation",
+        destination: "/services/ai-automation",
+        permanent: true,
+      },
+      {
+        source: "/workflow-automation",
+        destination: "/services/n8n-automation",
+        permanent: true,
+      },
+      {
+        source: "/ai-integrations",
+        destination: "/services/ai-integrations",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

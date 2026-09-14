@@ -41,6 +41,8 @@ export interface Project {
   title: string;
   category: ProjectCategory;
   year: string;
+  /** "client" = real client work with verified results; "demo" = demonstration build. */
+  type?: "client" | "demo";
   summary: string;
   overview: string[];
   problem: string;

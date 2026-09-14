@@ -20,6 +20,7 @@ import { ResultsGrid } from "@/components/projects/detail/results-grid";
 import { WhatsAppButton } from "@/components/whatsapp/whatsapp-button";
 import { JsonLd } from "@/components/seo/json-ld";
 import { breadcrumbLd } from "@/lib/jsonld";
+import { buildMetadata } from "@/lib/seo/config";
 
 interface Params {
   params: Promise<{ slug: string }>;
@@ -36,16 +37,13 @@ export async function generateMetadata({
   const project = getProjectBySlug(slug);
   if (!project) return {};
 
-  return {
+  return buildMetadata({
     title: `${project.title} — Case Study`,
     description: project.summary,
-    alternates: { canonical: `/projects/${project.slug}` },
-    openGraph: {
-      title: `${project.title} | Case Study`,
-      description: project.summary,
-      type: "article",
-    },
-  };
+    path: `/projects/${project.slug}`,
+    ogType: "article",
+    publishedTime: `2026-01-01`,
+  });
 }
 
 export default async function ProjectPage(
@@ -105,6 +103,12 @@ export default async function ProjectPage(
             <span className="font-mono text-xs text-zinc-500">
               {project.year}
             </span>
+            {project.type === "demo" && (
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs font-medium text-zinc-300">
+                <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-green-400" />
+                Demonstration build
+              </span>
+            )}
           </div>
           <h1 className="max-w-3xl font-display text-3xl font-bold leading-tight tracking-tight text-white sm:text-5xl">
             {project.title}
@@ -112,6 +116,14 @@ export default async function ProjectPage(
           <p className="max-w-2xl text-base leading-relaxed text-zinc-400 sm:text-lg">
             {project.summary}
           </p>
+          {project.type === "demo" && (
+            <p className="max-w-2xl text-sm leading-relaxed text-zinc-500">
+              To stay honest about results, we&apos;ve built this as a fully
+              working demonstration, not a claim about a paying client.
+              Every system we ship starts from a working prototype exactly
+              like this one.
+            </p>
+          )}
           <div className="flex flex-wrap gap-1.5 pt-1">
             {project.technologies.map((tech) => (
               <TechnologyBadge key={tech} label={tech} />
@@ -119,7 +131,7 @@ export default async function ProjectPage(
           </div>
           {service && (
             <Link
-              href={`/services#${service.id}`}
+              href={`/services/${service.id}`}
               className="inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-300 transition-colors hover:text-emerald-200"
             >
               Part of our {service.title} service

@@ -7,15 +7,29 @@ import { CTASection } from "@/components/ui/cta-section";
 import { articles } from "@/data/articles";
 import { JsonLd } from "@/components/seo/json-ld";
 import { articleListLd } from "@/lib/jsonld";
+import { buildMetadata } from "@/lib/seo/config";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Resources — AI, Automation & Workflow Guides",
   description:
     "Practical guides on AI agents, n8n workflow automation and getting your data ready for automation — written from real project experience.",
-  alternates: { canonical: "/resources" },
-};
+  path: "/resources",
+  keywords: [
+    "AI automation guides",
+    "workflow automation",
+    "AI agents explained",
+    "n8n tutorials",
+    "business automation checklist",
+  ],
+});
 
 export default function ResourcesPage() {
+  const formatDate = (iso: string) =>
+    new Date(iso).toLocaleDateString("en-GB", {
+      year: "numeric",
+      month: "short",
+    });
+
   return (
     <div className="relative">
       <JsonLd data={articleListLd("Resources & Guides", articles)} />
@@ -42,7 +56,7 @@ export default function ResourcesPage() {
                     {article.category}
                   </span>
                   <span className="font-mono text-xs text-zinc-500">
-                    {article.readingMinutes} min read
+                    {formatDate(article.publishedAt)} · {article.readingMinutes} min read
                   </span>
                 </div>
                 <h2 className="font-display text-xl font-bold leading-snug text-white">

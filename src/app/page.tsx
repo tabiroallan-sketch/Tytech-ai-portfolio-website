@@ -11,13 +11,25 @@ import { ButtonLink } from "@/components/ui/button";
 import { TestimonialSection } from "@/components/testimonials/testimonial-section";
 import { services } from "@/data/services";
 import { getFeaturedProjects } from "@/data/projects";
+import { buildMetadata } from "@/lib/seo/config";
 import { ArrowRight, ClipboardList, Code2, Rocket, SearchCheck } from "lucide-react";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
+  title: "AI Automation Agency — AI Agents, n8n & Business Automation",
   description:
-    "We build modern websites, AI agents and automated workflows that help businesses eliminate repetitive work, respond faster and operate more efficiently.",
-  alternates: { canonical: "/" },
-};
+    "Tytech AI is an AI automation agency building AI agents, n8n workflows, business integrations and websites that remove repetitive work and speed up your operations.",
+  path: "/",
+  keywords: [
+    "AI automation agency",
+    "AI automation services",
+    "AI agents",
+    "business process automation",
+    "n8n automation",
+    "AI integrations",
+    "workflow automation",
+    "custom AI systems",
+  ],
+});
 
 const process = [
   {
@@ -191,7 +203,7 @@ export default function HomePage() {
                 </li>
               ))}
             </ul>
-            <ButtonLink href="/services#ai-agents" variant="secondary">
+            <ButtonLink href="/services/ai-agents" variant="secondary">
               Explore AI Agents
               <ArrowRight className="h-4 w-4" aria-hidden />
             </ButtonLink>

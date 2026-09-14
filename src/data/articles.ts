@@ -32,7 +32,7 @@ export const articles: Article[] = [
     category: "Automation",
     publishedAt: "2026-09-08",
     readingMinutes: 6,
-    relatedService: { label: "AI Automation for Business", href: "/ai-automation" },
+    relatedService: { label: "AI Automation for Business", href: "/services/ai-automation" },
     relatedProjectSlug: "ai-lead-qualification-system",
     body: [
       {
@@ -87,7 +87,7 @@ export const articles: Article[] = [
     category: "Automation",
     publishedAt: "2026-09-05",
     readingMinutes: 7,
-    relatedService: { label: "Workflow Automation with n8n", href: "/workflow-automation" },
+    relatedService: { label: "Workflow Automation with n8n", href: "/services/n8n-automation" },
     relatedProjectSlug: "whatsapp-business-automation",
     body: [
       {
@@ -138,7 +138,7 @@ export const articles: Article[] = [
     category: "AI Agents",
     publishedAt: "2026-08-28",
     readingMinutes: 6,
-    relatedService: { label: "AI Agents for Business", href: "/ai-agents" },
+    relatedService: { label: "AI Agents for Business", href: "/services/ai-agents" },
     relatedProjectSlug: "ai-customer-support-agent",
     body: [
       {
@@ -185,7 +185,7 @@ export const articles: Article[] = [
     category: "AI Business Systems",
     publishedAt: "2026-08-20",
     readingMinutes: 5,
-    relatedService: { label: "AI Integrations & API Automation", href: "/ai-integrations" },
+    relatedService: { label: "AI Integrations & API Automation", href: "/services/ai-integrations" },
     relatedProjectSlug: "ai-content-automation-system",
     body: [
       {
@@ -213,6 +213,163 @@ export const articles: Article[] = [
         heading: "A first realistic AI project",
         paragraphs: [
           "Pick one narrow, honest use: draft content for your approval, summarize enquiries, keep a reporting document current. Give the system exactly the data and rules for that one job. Run it for two weeks, review the output yourself, and let the workflow earn its place before you expand it. That's how AI stops being an experiment and becomes part of how the business runs.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "ai-agents-vs-chatbots",
+    title: "AI agents vs chatbots: the difference that matters",
+    description:
+      "Both give your website the ability to talk to customers — but one of them can also do things. Here's the difference in plain terms, and when each makes sense.",
+    category: "AI Agents",
+    publishedAt: "2026-09-12",
+    readingMinutes: 6,
+    relatedService: { label: "AI Agents for Business", href: "/services/ai-agents" },
+    relatedProjectSlug: "ai-customer-support-agent",
+    body: [
+      {
+        paragraphs: [
+          "The words get used interchangeably, which is a shame, because the thing your business actually needs is decided by the difference. A chatbot talks. An AI agent can also act — check a record, update a field, trigger a workflow, send a notification — and then report back on what it did.",
+        ],
+      },
+      {
+        heading: "A chatbot answers questions",
+        bullets: [
+          "It reads the customer's message and responds with information.",
+          "Its job ends at the answer — nothing in the business changes because of the conversation.",
+          "Useful for FAQs, opening hours, order status explanations, polite redirection.",
+        ],
+        paragraphs: [
+          "If a conversation ends in an answer, a chatbot is exactly the right amount of machinery. It's why most 'AI' buttons on websites are really just this, and that's fine — frankly it's what most customers want when they ask 'what time do you close?'",
+        ],
+      },
+      {
+        heading: "An AI agent also does things",
+        bullets: [
+          "It can look up an order by number and tell you its exact status, not a general guess.",
+          "It can create or update records — a lead, a ticket, a follow-up task — inside your CRM.",
+          "It can escalate to a human the moment a conversation leaves its rules.",
+          "It hands the team a summary of what happened and what it changed.",
+        ],
+        paragraphs: [
+          "The key word is agency: the system takes a step that changes the state of your business. That's what turns a chat widget from a small convenience into a device that actually saves hours every week.",
+        ],
+      },
+      {
+        heading: "Which one should your business add?",
+        paragraphs: [
+          "Start with the outcome you need, not the buzzword. If customers mostly ask questions, a chatbot is quicker to build and cheaper to run. If you're losing time to work that happens in the chat's aftermath — qualifying leads, updating records, following up — an agent is what moves the needle, because it removes the manual step the old chat leaves behind.",
+        ],
+      },
+      {
+        heading: "The honest middle ground",
+        paragraphs: [
+          "The systems we ship are usually a hybrid: an agent that answers like a chatbot, but with actions attached to defined, guarded tasks and a human in the loop for anything consequential. That gives you the convenience of instant answers and the reliability of a person deciding the parts that actually cost money.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "how-much-does-ai-automation-cost",
+    title: "How much does AI automation cost? An honest breakdown",
+    description:
+      "A realistic look at why automation prices range so wildly online, what you're actually paying for, and how to budget for a system that doesn't quietly die.",
+    category: "AI Business Systems",
+    publishedAt: "2026-09-10",
+    readingMinutes: 7,
+    relatedService: { label: "AI Automation for Business", href: "/services/ai-automation" },
+    relatedProjectSlug: "ai-lead-qualification-system",
+    body: [
+      {
+        paragraphs: [
+          "Search for 'AI automation cost' and you'll get an answer range so wide it's meaningless — from a few hundred dollars to six figures. The truth is that both figures are real and both are correct, because the price is not set by the technology. It's set by three things no tool can tell you: the complexity of the process, the stakes of a failure, and what happens after launch.",
+        ],
+      },
+      {
+        heading: "What you're actually paying for",
+        bullets: [
+          "Discovery — understanding how the process really works today, including the exceptions your team has memorised.",
+          "The build — configuring the workflow, integrating the tools, and the AI work needed for anything unstructured.",
+          "Guardrails — error handling, retries, logging, and the points where a human must approve a decision.",
+          "Handover — documentation, and some amount of help until the team trusts it.",
+          "Running costs — the subscription or platform usage fees the system needs to keep working.",
+        ],
+        paragraphs: [
+          "The gap between 'a few hundred dollars' and 'expensive' is almost never the AI itself. It's how much discovery and hardening the job demands, and whether the person building it bothers with the parts that keep it alive after the demo.",
+        ],
+      },
+      {
+        heading: "The price ranges that actually make sense",
+        paragraphs: [
+          "Allow us to be deliberately vague with the numbers, because in good conscience nobody can quote your automation without seeing the process. What we can tell you is how the bands break down, so you can sanity-check what you're being offered:",
+        ],
+        bullets: [
+          "Tidy, single-step jobs — a form forwarding to a spreadsheet, a notification pipeline — are genuinely small jobs, worth a modest fixed fee. They're cheap because they're simple, not because the vendor is kind.",
+          "Real process automation — AI involvement, multiple tools, exceptions, CRM updates — sits comfortably in the range of a typical services engagement. You're paying for discovery and hardening brought together.",
+          "Enterprise-class systems — high volume, compliance, custom code, monitoring — cost accordingly, and attract people with experience of those demands.",
+        ],
+      },
+      {
+        heading: "How to avoid the two classic buys",
+        paragraphs: [
+          "The first classic mistake is paying the premium rate for a job that's actually simple, because hype made it sound exotic. The second is buying a cheap build that only works in the demo: no retries, no logging, no error alerting, no page. Ask for the two things that don't look impressive but decide everything — what happens when an API is down, and what happens when the workflow makes a mistake. The answer tells you how the system will behave in month three.",
+        ],
+      },
+      {
+        heading: "Budgeting honestly",
+        paragraphs: [
+          "Put your budget next to the hours the process costs you each month, and treat the automation as a tool that should pay for itself within a handful of months. If it can clear that bar, the price discussion is about a credible plan, not a gamble. If it can't, the automation isn't worth buying at any price.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "which-tasks-to-automate-first",
+    title: "Which tasks should you automate first? A prioritisation guide",
+    description:
+      "Most teams overcomplicate their first automation. A three-question test that points you to the workflow worth automating first — without the hype.",
+    category: "Automation",
+    publishedAt: "2026-09-14",
+    readingMinutes: 5,
+    relatedService: { label: "Workflow Automation with n8n", href: "/services/n8n-automation" },
+    relatedProjectSlug: "whatsapp-business-automation",
+    body: [
+      {
+        paragraphs: [
+          "The teams that succeed with automation don't have better tools or bigger budgets. They just picked the right first job. The teams that stall picked the most impressive job — the flashy end-to-end dream system — and watched it take months to build while nothing shipped.",
+        ],
+      },
+      {
+        heading: "The three-question test",
+        bullets: [
+          "How repetitive is it? — Does this happen daily or weekly, in the same shape every time? The first automation should be something that occurs constantly.",
+          "How much does it actually cost? — Count the real time it eats each week, and the cost of the delays it causes. Automate the thing whose friction you can feel.",
+          "How clear are the rules? — Can you write the decision tree on one page? If yes, it automates cleanly. If the process depends on in-the-moment judgment, leave it for later.",
+        ],
+        paragraphs: [
+          "A task that scores high on all three is your first automation. A task that scores high on excitement but low on all three is the one your team will abandon mid-build.",
+        ],
+      },
+      {
+        heading: "Great first automations",
+        bullets: [
+          "Enquiry capture and instant acknowledgement — never leave a customer in silence again.",
+          "Data entry that moves records between a form, a CRM and a spreadsheet by hand today.",
+          "Notifications that tell the right person the right thing at the right time.",
+          "A digest — a daily summary of leads, orders or messages that replaces an hour of clicking.",
+        ],
+      },
+      {
+        heading: "Automations that are premature",
+        paragraphs: [
+          "Skip anything that only runs monthly, anything that depends on one person's judgment call, and anything you can't test safely this week. A system nobody trusts is worse than the manual process it replaces — it fails quietly and you blame the wrong thing.",
+        ],
+      },
+      {
+        heading: "Ship the seam, then widen it",
+        paragraphs: [
+          "The best first automation is one you can run in parallel with the manual process for a week, compare the outputs side by side, and only then trust. Once that seam is earning its keep, the next automation gets easier — you've already got a pattern, a process and a team that believes in it.",
         ],
       },
     ],

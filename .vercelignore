@@ -1,0 +1,25 @@
+# never include build/local artifacts
+.next
+node_modules
+dev.log
+*.tsbuildinfo
+
+# local drafts & source-only assets (not served by the site)
+/images/
+/app.png
+/chat.png
+/invoice.png
+/lead.png
+/graph text.png
+/hero.png
+CLAUDE.md
+
+# unused starter/public assets (referenced nowhere in src)
+/public/logo-original.png
+/public/logo2.jpeg
+/public/ty.png
+/public/next.svg
+/public/vercel.svg
+/public/window.svg
+/public/globe.svg
+/public/file.svg

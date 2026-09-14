@@ -9,6 +9,7 @@ import { WhatsAppButton } from "@/components/whatsapp/whatsapp-button";
 import { getProjectBySlug } from "@/data/projects";
 import { JsonLd } from "@/components/seo/json-ld";
 import { articleLd, breadcrumbLd } from "@/lib/jsonld";
+import { buildMetadata } from "@/lib/seo/config";
 
 interface Params {
   params: Promise<{ slug: string }>;
@@ -23,18 +24,14 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const article = getArticleBySlug(slug);
   if (!article) return {};
 
-  return {
+  return buildMetadata({
     title: article.title,
     description: article.description,
-    alternates: { canonical: `/resources/${article.slug}` },
-    openGraph: {
-      title: article.title,
-      description: article.description,
-      type: "article",
-      publishedTime: article.publishedAt,
-      modifiedTime: article.updatedAt,
-    },
-  };
+    path: `/resources/${article.slug}`,
+    ogType: "article",
+    publishedTime: article.publishedAt,
+    modifiedTime: article.updatedAt,
+  });
 }
 
 export default async function ArticlePage(props: PageProps<"/resources/[slug]">) {

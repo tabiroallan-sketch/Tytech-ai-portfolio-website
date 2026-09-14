@@ -104,7 +104,7 @@ export function ServiceCard({ service }: ServiceCardProps) {
       </AnimatePresence>
 
       <Link
-        href={`/services#${service.id}`}
+        href={`/services/${service.id}`}
         className="mt-auto inline-flex items-center gap-1.5 pt-1 text-sm font-medium text-emerald-300 transition-colors hover:text-emerald-200"
       >
         Learn more

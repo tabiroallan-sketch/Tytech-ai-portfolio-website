@@ -5,13 +5,15 @@ import { SectionHeading } from "@/components/ui/section-heading";
 import { projects } from "@/data/projects";
 import { JsonLd } from "@/components/seo/json-ld";
 import { projectListLd } from "@/lib/jsonld";
+import { buildMetadata } from "@/lib/seo/config";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Projects — AI Agents, Automation & Websites",
   description:
     "Case studies of AI agents, n8n workflow automations and modern websites: the problem, the solution, how it works and the results.",
-  alternates: { canonical: "/projects" },
-};
+  path: "/projects",
+  ogType: "website",
+});
 
 export default function ProjectsPage() {
   return (
@@ -26,13 +28,14 @@ export default function ProjectsPage() {
           as="h1"
           eyebrow="Portfolio"
           title="Projects & Case Studies"
-          description="Real systems built around AI agents, n8n workflows and modern web development. Every case study shows the problem, the build and the outcome."
+          description="Working systems built around AI agents, n8n workflows and modern web development. Every case study shows the problem, the build and the outcome."
         />
         <ProjectsGrid projects={projects} />
-        <p className="mt-12 text-center text-xs italic text-zinc-600">
-          Demo note: current entries are demonstration builds — realistic
-          examples of the work we deliver. Metrics are illustrative until
-          replaced with real client outcomes.
+        <p className="mx-auto mt-12 max-w-2xl text-center text-xs italic leading-relaxed text-zinc-500">
+          To keep every claim verifiable, the current entries are marked as
+          demonstration builds — fully working examples of the systems we
+          deliver, built and tested end-to-end. When we ship for a client, the
+          same page shows their real results.
         </p>
       </section>
 

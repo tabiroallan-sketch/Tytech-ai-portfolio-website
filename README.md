@@ -76,7 +76,7 @@ Everything below lives in **`src/data/site.ts`**, which is derived from the sing
 export const site = {
   name: "Alex Carter",        // ← your name/brand
   initials: "AC",             // ← navbar logo mark
-  url: ...,                   // set NEXT_PUBLIC_SITE_URL env var in production
+  url: ...,                   // set NEXT_PUBLIC_SITE_URL=https://tytech-ai.vercel.app in production
   email: "tabiroallan@gmail.com",
   socials: {
     github: "",               // ← add URLs; buttons appear automatically
@@ -392,7 +392,7 @@ Create `.env.local` (never commit it):
 
 | Variable | Used by | Purpose |
 |---|---|---|
-| `NEXT_PUBLIC_SITE_URL` | SEO/sitemap | Your production URL, e.g. `https://tytech.ai` |
+| `NEXT_PUBLIC_SITE_URL` | SEO/sitemap | Your production URL, e.g. `https://tytech-ai.vercel.app` |
 | `AI_API_URL` | demo-chat route | Your real AI agent endpoint |
 | `AI_API_KEY` | demo-chat route | Bearer token for that endpoint |
 | `NEXT_PUBLIC_DEMO_CHAT_ENDPOINT` | lib/ai.ts | Optional custom chat endpoint |
@@ -411,7 +411,7 @@ On Vercel, add these in **Project Settings → Environment Variables**.
 1. Push this folder to a GitHub repository.
 2. Go to [vercel.com](https://vercel.com) → **Add New → Project** → import the repo.
 3. Framework preset auto-detects Next.js. Click **Deploy**.
-4. Add the environment variables from the table above (at minimum `NEXT_PUBLIC_SITE_URL=https://your-domain.vercel.app`).
+4. Add the environment variables from the table above (at minimum `NEXT_PUBLIC_SITE_URL=https://tytech-ai.vercel.app`).
 5. Add your custom domain under **Settings → Domains** if you have one.
 
 Zero-config otherwise — API routes, image optimization and sitemap work out of the box.

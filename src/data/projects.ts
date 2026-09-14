@@ -46,6 +46,7 @@ export const projects: Project[] = [
     title: "AI Lead Qualification System",
     category: "AI Business Systems",
     year: "2026",
+    type: "demo",
     featured: true,
     summary:
       "An end-to-end system that captures leads, qualifies them with an AI agent, updates the CRM and notifies sales — in under a minute.",
@@ -115,6 +116,7 @@ export const projects: Project[] = [
     title: "AI Customer Support Agent",
     category: "AI Agents",
     year: "2026",
+    type: "demo",
     featured: true,
     summary:
       "A website chat agent trained on company knowledge that answers customer questions instantly and escalates edge cases to humans.",
@@ -183,6 +185,7 @@ export const projects: Project[] = [
     title: "WhatsApp Business Automation",
     category: "Automation",
     year: "2025",
+    type: "demo",
     summary:
       "n8n workflows on the WhatsApp Business API that confirm orders, answer FAQs and follow up with customers automatically.",
     overview: [
@@ -242,6 +245,7 @@ export const projects: Project[] = [
     title: "Automated Invoice Processing",
     category: "Automation",
     year: "2025",
+    type: "demo",
     summary:
       "Invoices arriving by email are extracted, validated against purchase orders and filed to accounting — without anyone touching a spreadsheet.",
     overview: [
@@ -299,6 +303,7 @@ export const projects: Project[] = [
     title: "AI Content Automation System",
     category: "AI Business Systems",
     year: "2025",
+    type: "demo",
     summary:
       "One brief in, a week of content out — AI-drafted social posts, newsletter sections and blog outlines queued for human approval.",
     overview: [
@@ -356,6 +361,7 @@ export const projects: Project[] = [
     title: "Modern Business Website",
     category: "Web Development",
     year: "2026",
+    type: "demo",
     featured: true,
     summary:
       "A fast, SEO-optimized marketing site for a services business with a lead-generating contact flow and a 95+ Lighthouse score.",

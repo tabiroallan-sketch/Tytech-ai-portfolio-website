@@ -10,7 +10,7 @@ import { business } from "@/config/site";
 export const site = {
   name: business.name,
   initials: "TA",
-  role: "AI Automation & Web Solutions Specialist",
+  role: "AI Automation & Business Systems Agency",
   tagline: business.tagline,
   description: business.description,
   url: business.url,
@@ -23,8 +23,8 @@ export const site = {
 export const navLinks = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
+  { href: "/solutions", label: "Solutions" },
   { href: "/projects", label: "Projects" },
   { href: "/resources", label: "Resources" },
-  { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ] as const;

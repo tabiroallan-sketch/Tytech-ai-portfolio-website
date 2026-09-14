@@ -5,13 +5,14 @@ import { WhatsAppButton } from "@/components/whatsapp/whatsapp-button";
 import { WhatsAppIcon } from "@/components/whatsapp/whatsapp-icon";
 import { site } from "@/data/site";
 import { Reveal } from "@/components/ui/reveal";
+import { buildMetadata } from "@/lib/seo/config";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Contact — Start Your Automation Project",
   description:
     "Have a repetitive business process? Let's automate it. Tell us what eats your team's time and get a clear plan with a fixed quote.",
-  alternates: { canonical: "/contact" },
-};
+  path: "/contact",
+});
 
 const steps = [
   {

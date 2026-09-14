@@ -6,13 +6,14 @@ import { SectionHeading } from "@/components/ui/section-heading";
 import { TechnologyBadge } from "@/components/ui/technology-badge";
 import { Reveal } from "@/components/ui/reveal";
 import { CTASection } from "@/components/ui/cta-section";
+import { buildMetadata } from "@/lib/seo/config";
 
-export const metadata: Metadata = {
-  title: "About — AI Automation & Web Solutions Specialist",
+export const metadata: Metadata = buildMetadata({
+  title: "About — AI Automation & Business Systems Agency",
   description:
     "We help businesses eliminate repetitive work with AI agents, n8n workflow automation, API integrations and modern websites.",
-  alternates: { canonical: "/about" },
-};
+  path: "/about",
+});
 
 const principles = [
   {
