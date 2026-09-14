@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750">
+  <defs>
+    <linearGradient id="wa" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#c28f55" stop-opacity=".18"/>
+      <stop offset="1" stop-color="#c29a60" stop-opacity=".04"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="750" fill="#0e0d0b"/>
+  <rect width="1200" height="56" fill="#151310"/>
+  <circle cx="28" cy="28" r="7" fill="#f87171" opacity=".7"/>
+  <circle cx="52" cy="28" r="7" fill="#c9934e" opacity=".7"/>
+  <circle cx="76" cy="28" r="7" fill="#c28f55" opacity=".8"/>
+  <rect x="480" y="16" width="240" height="24" rx="12" fill="#ffffff" opacity=".06"/>
+  <text x="600" y="32" font-family="monospace" font-size="12" fill="#9ca3af" text-anchor="middle">whatsapp-automation · n8n</text>
+
+  <!-- phone -->
+  <rect x="150" y="90" width="360" height="620" rx="40" fill="#171412" stroke="#ffffff" stroke-opacity=".12"/>
+  <rect x="150" y="90" width="360" height="96" rx="40" fill="#1a1614"/>
+  <rect x="150" y="150" width="360" height="36" fill="#1a1614"/>
+  <circle cx="196" cy="138" r="20" fill="#352a1a"/>
+  <text x="196" y="144" font-family="sans-serif" font-weight="bold" font-size="14" fill="#d5b488" text-anchor="middle">RB</text>
+  <text x="228" y="132" font-family="sans-serif" font-weight="bold" font-size="14" fill="#f1f5f9">Rosa's Bakery</text>
+  <text x="228" y="152" font-family="sans-serif" font-size="11" fill="#c28f55">● online — automated replies</text>
+
+  <g font-family="sans-serif" font-size="12.5">
+    <!-- incoming -->
+    <rect x="174" y="210" width="220" height="44" rx="14" fill="#26211a"/>
+    <text x="190" y="236" fill="#e2e8f0">Hi! Is the sourdough back today?</text>
+    <!-- auto reply -->
+    <rect x="256" y="268" width="230" height="60" rx="14" fill="#33281a" stroke="#c28f55" stroke-opacity=".3"/>
+    <text x="272" y="292" fill="#e2ccad">Yes 🥖 fresh sourdough from 9am!</text>
+    <text x="272" y="312" fill="#e2ccad">Reply ORDER to reserve a loaf.</text>
+    <!-- order flow -->
+    <rect x="174" y="342" width="140" height="42" rx="14" fill="#26211a"/>
+    <text x="190" y="367" fill="#e2e8f0">ORDER</text>
+    <rect x="216" y="398" width="270" height="60" rx="14" fill="#33281a" stroke="#c28f55" stroke-opacity=".3"/>
+    <text x="232" y="422" fill="#e2ccad">Reserved ✓ Pickup today 4–6pm.</text>
+    <text x="232" y="442" fill="#e2ccad">Confirmation sent + added to sheet.</text>
+    <rect x="174" y="472" width="240" height="44" rx="14" fill="#26211a"/>
+    <text x="190" y="498" fill="#e2e8f0">Do you do wedding cakes?</text>
+    <rect x="256" y="530" width="230" height="60" rx="14" fill="#33281a" stroke="#c28f55" stroke-opacity=".3"/>
+    <text x="272" y="554" fill="#e2ccad">We do! Let me connect you with</text>
+    <text x="272" y="574" fill="#e2ccad">Rosa personally… 👋 (escalated)</text>
+    <rect x="174" y="620" width="312" height="30" rx="15" fill="#1d1916" stroke="#ffffff" stroke-opacity=".08"/>
+    <text x="192" y="639" fill="#4b5563" font-size="12">Message…</text>
+  </g>
+
+  <!-- n8n flow rail -->
+  <g font-family="sans-serif">
+    <rect x="570" y="90" width="480" height="300" rx="24" fill="#171412" stroke="#ffffff" stroke-opacity=".09"/>
+    <text x="600" y="128" font-size="12" fill="#6b7280" letter-spacing="1.5">N8N WORKFLOW — MESSAGE ROUTER</text>
+    <g transform="translate(610,170)" font-size="12.5">
+      <rect width="180" height="52" rx="12" fill="#2b2114" stroke="#c28f55" stroke-opacity=".4"/>
+      <text x="16" y="32" fill="#e2ccad" font-weight="bold">⚡ Webhook</text><text x="16" y="46" fill="#d3b084" font-size="10">message received</text>
+      <line x1="180" y1="26" x2="220" y2="26" stroke="#c28f55" stroke-width="2" stroke-dasharray="6 4"><animate attributeName="stroke-dashoffset" values="10;0" dur="0.9s" repeatCount="indefinite"/></line>
+      <rect x="226" width="180" height="52" rx="12" fill="#1a1614" stroke="#ffffff" stroke-opacity=".12"/>
+      <text x="242" y="32" fill="#e2e8f0" font-weight="bold">🧠 AI Intent</text><text x="242" y="46" fill="#9ca3af" font-size="10">faq / order / human</text>
+      <path d="M316 52 v30 h-116 v18" stroke="#c28f55" stroke-opacity=".5" fill="none" stroke-dasharray="5 4"/>
+      <rect x="130" y="106" width="160 " height="48" rx="12" fill="#1a1614" stroke="#ffffff" stroke-opacity=".12"/>
+      <text x="146" y="134" fill="#e2e8f0" font-weight="bold">📋 FAQ Reply</text>
+      <path d="M316 78 v76" stroke="#c29a60" stroke-opacity=".6" fill="none" stroke-dasharray="5 4"/>
+      <rect x="236" y="154" width="170" height="48" rx="12" fill="#33281a" stroke="#c29a60" stroke-opacity=".45"/>
+      <text x="252" y="182" fill="#e5d2af" font-weight="bold">📦 Order Flow</text>
+      <path d="M316 78 v124" stroke="#c28f55" stroke-opacity=".35" fill="none" stroke-dasharray="5 4"/>
+      <rect x="236" y="202" width="170" height="48" rx="12" fill="#1c1917" stroke="#c9934e" stroke-opacity=".4"/>
+      <text x="252" y="230" fill="#e5d2af" font-weight="bold">👤 Escalate → Rosa</text>
+    </g>
+  </g>
+
+  <!-- results cards -->
+  <g font-family="sans-serif">
+    <rect x="570" y="420" width="225" height="120" rx="18" fill="#171412" stroke="#ffffff" stroke-opacity=".09"/>
+    <text x="594" y="452" font-size="11" fill="#6b7280">AUTO-REPLIES / DAY</text>
+    <text x="594" y="492" font-weight="bold" font-size="28" fill="#c28f55">~85%</text>
+    <text x="594" y="518" font-size="11" fill="#9ca3af">of messages need no human</text>
+    <rect x="825" y="420" width="225" height="120" rx="18" fill="#171412" stroke="#ffffff" stroke-opacity=".09"/>
+    <text x="849" y="452" font-size="11" fill="#6b7280">FIRST REPLY TIME</text>
+    <text x="849" y="492" font-weight="bold" font-size="28" fill="#c29a60">&lt; 10 sec</text>
+    <text x="849" y="518" font-size="11" fill="#9ca3af">even at 2am on Sundays</text>
+    <rect x="570" y="570" width="480" height="140" rx="18" fill="#171412" stroke="#ffffff" stroke-opacity=".09"/>
+    <text x="594" y="602" font-size="11" fill="#6b7280" letter-spacing="1.5">CONNECTED TOOLS</text>
+    <g transform="translate(594,622)">
+      <rect width="104" height="30" rx="15" fill="#ffffff" fill-opacity=".05"/><text x="52" y="19" fill="#cbd5e1" font-size="12" text-anchor="middle">WhatsApp API</text>
+      <rect x="114" width="104" height="30" rx="15" fill="#ffffff" fill-opacity=".05"/><text x="166" y="19" fill="#cbd5e1" font-size="12" text-anchor="middle">Airtable</text>
+      <rect x="228" width="104" height="30" rx="15" fill="#ffffff" fill-opacity=".05"/><text x="280" y="19" fill="#cbd5e1" font-size="12" text-anchor="middle">Google Sheets</text>
+      <rect x="342" width="90" height="30" rx="15" fill="#ffffff" fill-opacity=".05"/><text x="387" y="19" fill="#cbd5e1" font-size="12" text-anchor="middle">OpenAI</text>
+    </g>
+  </g>
+  <rect width="1200" height="750" fill="url(#wa)" opacity=".05"/>
+</svg>

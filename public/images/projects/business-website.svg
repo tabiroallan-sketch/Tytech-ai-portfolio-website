@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750">
+  <defs>
+    <linearGradient id="web" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#c28f55" stop-opacity=".14"/>
+      <stop offset="1" stop-color="#c29a60" stop-opacity=".04"/>
+    </linearGradient>
+    <linearGradient id="btn" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#c28f55"/>
+      <stop offset="1" stop-color="#c29a60"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="750" fill="#0e0d0b"/>
+  <!-- browser chrome -->
+  <rect width="1200" height="56" fill="#151310"/>
+  <circle cx="28" cy="28" r="7" fill="#f87171" opacity=".7"/>
+  <circle cx="52" cy="28" r="7" fill="#c9934e" opacity=".7"/>
+  <circle cx="76" cy="28" r="7" fill="#c28f55" opacity=".8"/>
+  <rect x="440" y="16" width="320" height="24" rx="12" fill="#ffffff" opacity=".06"/>
+  <text x="600" y="32" font-family="monospace" font-size="12" fill="#9ca3af" text-anchor="middle">fernandco-studio.com</text>
+
+  <!-- site nav -->
+  <g font-family="sans-serif">
+    <rect y="56" width="1200" height="64" fill="#151310" stroke="#ffffff" stroke-opacity=".05"/>
+    <circle cx="80" cy="88" r="12" fill="url(#btn)"/><text x="104" y="93" font-weight="bold" font-size="15" fill="#f1f5f9">Fern&amp;Co Studio</text>
+    <g font-size="13" fill="#9ca3af">
+      <text x="850" y="93" fill="#c28f55">Home</text><text x="910" y="93">Services</text><text x="985" y="93">Work</text><text x="1045" y="93">About</text>
+    </g>
+    <rect x="1090" y="72" width="90" height="32" rx="9" fill="url(#btn)"/>
+    <text x="1135" y="92" font-size="12.5" font-weight="bold" fill="#0a0a0a" text-anchor="middle">Enquire</text>
+  </g>
+
+  <!-- hero -->
+  <g font-family="sans-serif">
+    <rect x="80" y="170" width="560" height="46" rx="23" fill="#2b2114"/>
+    <text x="110" y="199" font-size="13" fill="#d3b084">● Design studio — booking Q4 projects</text>
+    <text x="80" y="286" font-weight="bold" font-size="52" fill="#f8fafc">Brands that feel</text>
+    <text x="80" y="350" font-weight="bold" font-size="52" fill="url(#btn)">impossible to ignore.</text>
+    <text x="80" y="398" font-size="16" fill="#94a3b8">Strategy, identity and web for ambitious teams.</text>
+    <rect x="80" y="430" width="180" height="52" rx="13" fill="url(#btn)"/>
+    <text x="170" y="461" font-size="14.5" font-weight="bold" fill="#0a0a0a" text-anchor="middle">Start a project →</text>
+    <rect x="276" y="430" width="150" height="52" rx="13" fill="none" stroke="#ffffff" stroke-opacity=".18"/>
+    <text x="351" y="461" font-size="14.5" fill="#e2e8f0" text-anchor="middle">View work</text>
+    <!-- mock cards -->
+    <rect x="700" y="160" width="420" height="240" rx="18" fill="#1a1614" stroke="#ffffff" stroke-opacity=".09"/>
+    <rect x="700" y="160" width="420" height="130" rx="18" fill="#352a1a" opacity=".35"/>
+    <path d="M760 250 q40 -70 80 -20 q30 45 70 10 q40 -40 90 20 l0 60 h-240 z" fill="#c28f55" opacity=".3"/>
+    <text x="726" y="326" font-size="14" font-weight="bold" fill="#f1f5f9">Nordic Design — rebrand</text>
+    <text x="726" y="348" font-size="12" fill="#6b7280">Identity · Web · +212% enquiries</text>
+    <rect x="700" y="424" width="200" height="120" rx="16" fill="#1a1614" stroke="#ffffff" stroke-opacity=".09"/>
+    <text x="724" y="472" font-size="22" font-weight="bold" fill="#c28f55">98</text>
+    <text x="724" y="494" font-size="11" fill="#9ca3af">Lighthouse perf</text>
+    <rect x="920" y="424" width="200" height="120" rx="16" fill="#1a1614" stroke="#ffffff" stroke-opacity=".09"/>
+    <text x="944" y="472" font-size="22" font-weight="bold" fill="#c29a60">&lt; 1s</text>
+    <text x="944" y="494" font-size="11" fill="#9ca3af">Load time on 4G</text>
+  </g>
+
+  <!-- contact strip -->
+  <g font-family="sans-serif">
+    <rect x="80" y="580" width="1040" height="120" rx="20" fill="#171412" stroke="#c28f55" stroke-opacity=".25"/>
+    <text x="120" y="634" font-size="19" font-weight="bold" fill="#f8fafc">Have a project in mind?</text>
+    <text x="120" y="662" font-size="13" fill="#94a3b8">Tell us about it — we reply within one business day.</text>
+    <rect x="880" y="610" width="200" height="48" rx="12" fill="url(#btn)"/>
+    <text x="980" y="639" font-size="13.5" font-weight="bold" fill="#0a0a0a" text-anchor="middle">Get a quote</text>
+    <rect x="480" y="618" width="360" height="44" rx="10" fill="#1f1f1f" stroke="#ffffff" stroke-opacity=".1"/>
+    <text x="500" y="645" font-size="13" fill="#4b5563">you@company.com</text>
+  </g>
+  <rect width="1200" height="750" fill="url(#web)" opacity=".06"/>
+</svg>
